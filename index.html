@@ -178,6 +178,13 @@
                 display: none;
             }
         }
+		<style>
+    /* CSS for page breaks when printing */
+    .page-break {
+        page-break-before: always; /* or page-break-after: always; */
+    }
+
+
     </style>
 </head>
 <body>
@@ -202,7 +209,7 @@
         <span class="close">&times;</span>
         <img class="modal-content" id="imgModalContent">
     </div>
-
+<div class="page-break"></div>
     <!-- Project Introduction Section -->
     <div class="section">
         <h2>Introduction</h2>
