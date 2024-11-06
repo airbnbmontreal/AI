@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transform Your Airbnb with AI Prompts</title>
+<title>Listing Optimization, Visual Descriptions & Management</title>
+    <style>
+        /* General Body Style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9FAFB;
+            color: #808080;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Frame Styling for Cover Image */
+        .cover-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #0056b3; /* Frame border color */
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 90%; /* Maximum width for desktop */
+            background-color: #ffffff; /* Optional background for frame */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cover Image Styling */
+        .cover-image {
+            max-width: 100%; /* Image scales with frame */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 8px;
+        }
+		/* Title Styling */
+        .cover-title {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #808080;
+        }
+
+        /* Button Style */
+        .print-button {
+            background-color: #808080;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .print-button:hover {
+            background-color: #cc4629;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 1.5em;
+            }
+            .cover-frame {
+                padding: 8px;
+            }
+        }
+   
+        /* Main Title */
+        h1.cover-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 18px;
+            color: #808080;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* Styled Section Containers */
+        .section {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Table Style */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Code Block Style */
+        .code-box {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Button Style */
+        .copy-button, .print-button {
+            background-color: ##008080;
+            color: ##808080;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .copy-button:hover, .print-button:hover {
+            background-color: #008080;
+        }
+
+        /* Print-specific styling */
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Print Button -->
+    <button class="print-button" onclick="window.print()">Print Report</button>
+
+    <!-- Cover Title and Image Frame -->
+    
+
+    <div class="cover-frame">
+        <img src="images/cover.jpg" alt="Cover for Transform Your Airbnb with AI Prompts" class="cover-image">
+    </div>
+	<div class="cover-title">Transform Your Airbnb with AI Prompts</div>
+    <div class="cover-title">Listing Optimization, Visual Descriptions & Management</div>
+    <div class="cover-title">Interactive, printable, copy-paste friendly</div>
+
+
+  
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModalContent">
+    </div>
+
+    <!-- Project Introduction Section -->
+    <div class="section">
+        <h2>Introduction</h2>
+        <p><strong>Project Name:</strong> Learn how AI prompts can enhance your Airbnb listing images and what 
+        to expect in this guide—prompts to use for Airbnb listing images for AI Optimization.</p>
+    </div>
+
+    <!-- Instructions for Using the Prompts Section -->
+    <div class="section">
+        <h2>Instructions for Using the Prompts</h2>
+        <ul>
+            <li>Copy the desired prompt. Use the button |Copy code|</li>
+            <li>Open your AI tool e.g., ChatGPT</li>
+            <li>Paste the prompt and customize any placeholders alongside your image</li>
+            <li>Download the enhanced image and upload it to your listing</li>
+            <li>Copy the visual description and add it to the image uploaded into the listing</li>
+        </ul>
+    </div>
+
+    <!-- Example Prompt Section with Copy Blocks -->
+   
+	<!-- Example Prompt Section with Copy Blocks -->
+    <div class="section">
+        <h2>Example Prompts</h2>
+
+        <h3>Prompt Example #1</h3>
+        <div class="code-box" id="code1">Please enhance this image by adjusting its brightness, exposure, and contrast. 
+		Make it appear clearer and more vibrant while keeping the colors natural and realistic. 
+		Ensure that the shadows and highlights are balanced, removing any dullness, and enhancing details subtly. 
+		Increase sharpness to improve clarity, but avoid making it look over-processed. 
+		Adjust saturation slightly to make the colors pop without looking unnatural.</div>
+        <button class="copy-button" onclick="copyToClipboard('code1')">Copy Code</button>
+
+        <h3>Prompt Example #2</h3>
+        <div class="code-box" id="code2">Enhance this image for Airbnb listing quality by adjusting brightness, 
+		exposure, and contrast to achieve a clear, vibrant look. Keep colors natural and realistic, 
+		balancing shadows and highlights to remove any dull areas. Gently enhance details and sharpness for improved clarity, 
+		avoiding an over-processed effect. Slightly increase saturation to make colors inviting and tasteful, ensuring they remain realistic.</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		
+		<h3>Prompt Example #3</h3>
+        <div class="code-box" id="code2">
+	
+		Optimize this image for an Airbnb listing by enhancing brightness, 
+		exposure, and contrast for a vibrant yet natural look. 
+		Balance shadows and highlights to remove any dull areas and subtly increase detail. 
+		Adjust sharpness to improve clarity without over-processing, 
+		and fine-tune saturation so colors appear inviting but remain realistic
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		
+		<h3>Prompt Example #4</h3>
+        <div class="code-box" id="code2">
+		Please enhance an image by improving its brightness, exposure, and overall visual appeal. 
+		I want to make the image look brighter and more vibrant without losing detail or making it look overexposed. 
+		Include tips on adjusting contrast, highlights, and shadows to achieve a balanced and professional look.
+			</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		
+		<h3>Prompt Example #5</h3>
+        <div class="code-box" id="code2">
+		Optimize this image for Airbnb by improving brightness, exposure, and vibrancy. 
+		Aim for a balanced, professional look that enhances visual appeal without overexposing or losing detail. 
+		Adjust contrast, highlights, and shadows to achieve a clean, welcoming aesthetic
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		
+		<h3>Prompt Example #6</h3>
+        <div class="code-box" id="code2">Enhance this image for Airbnb listing quality by adjusting brightness, 
+		exposure, and contrast to achieve a clear, vibrant look. Keep colors natural and realistic, 
+		balancing shadows and highlights to remove any dull areas. Gently enhance details and sharpness for improved clarity, 
+		avoiding an over-processed effect. Slightly increase saturation to make colors inviting and tasteful, ensuring they remain realistic.</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		
+		<h3>Prompt Example #7</h3>
+        <div class="code-box" id="code2">
+		Adjust the image parameters for optimal display, focusing on resolution, aspect ratio, and file size:
+- **Resolution**: Target at least 1024 x 683 pixels for clear quality, with higher resolutions like 2048 x 1365 pixels for sharper display on larger screens.
+- **Aspect Ratio**: Use a 3:2 landscape orientation for compatibility across desktop and mobile, ensuring images won’t get cropped in Airbnb’s gallery layout.
+- **Dimensions**: Ensure the image is at least 1024 pixels wide. 
+For a balance of quality and file size, dimensions around 1920 x 1280 pixels work well
+
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+    </div>
+	<h3>Prompt Example #8</h3>
+        <div class="code-box" id="code2">
+		Optimize this image for Airbnb by improving brightness, exposure, and vibrancy. 
+		Aim for a balanced, professional look that enhances visual appeal without overexposing or losing detail. 
+		Adjust contrast, highlights, and shadows to achieve a clean, welcoming aesthetic
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		<h3>Prompt Example #9</h3>
+        <div class="code-box" id="code2">
+		Describe the standout features of this dining room in under 250 characters, 
+		focusing on keywords that enhance Airbnb listing visibility. 
+		Highlight elements like the wooden dining table, modern black chairs, yellow pendant light, mirrored wall panels, and cozy ambiance
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+		<h3>Prompt Example #10</h3>
+        <div class="code-box" id="code2">
+		
+		1. Enhance Image Quality
+Brightness, Exposure, and Contrast: Adjust brightness and exposure to make the image clearer and more vibrant. Balance contrast while keeping colors natural and realistic.
+Shadows and Highlights: Ensure shadows and highlights are balanced, removing any dullness. Enhance details subtly to improve the overall look.
+Sharpness and Clarity: Increase sharpness if necessary, enhancing clarity without making the image look over-processed.
+Saturation: Adjust saturation slightly to make colors pop without appearing unnatural.
+2. Optimize Image Parameters for Display
+Resolution: Target at least 1024 x 683 pixels for clear quality. Higher resolutions, like 2048 x 1365 pixels, will ensure a sharper display on larger screens.
+Aspect Ratio: Use a 3:2 landscape orientation to ensure compatibility across desktop and mobile, preventing cropping in Airbnb’s gallery layout.
+Dimensions: Ensure the image is at least 1024 pixels wide. For good quality without excessive file size, aim for around 1920 x 1280 pixels.
+3. Craft a Keyword-Rich Description
+Objective: Write a concise description under 250 characters to improve Airbnb listing visibility.
+Keywords: Emphasize features such as the wooden dining table, modern black chairs, yellow pendant light, mirrored wall panels, and cozy ambiance.
+
+		
+		
+		
+		
+		</div>
+        <button class="copy-button" onclick="copyToClipboard('code2')">Copy Code</button>
+
+    <!-- Examples Table Section -->
+    <div class="section">
+        <h2>Examples</h2>
+        <table id="examplesTable">
+            <tr>
+                <th>Original Image</th>
+                <th>Prompt Number</th>
+                <th>Enhanced Image</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: airbnbMontreal@gmail.com</p>
+        <p>Social Media: @AnnaSuperHost</p>
+    </div>
+
+  <!-- JavaScript to Populate Table and Copy Code Functionality -->
+<script>
+    const prompts = [
+        { id: "1", originalImage: "images/or.jpg", enhancedImage: "images/pr1.jpg" },
+        { id: "2", originalImage: "images/or.jpg", enhancedImage: "images/pr2.jpg" },
+        { id: "3", originalImage: "images/or.jpg", enhancedImage: "images/pr3.jpg" },
+        { id: "4", originalImage: "images/or.jpg", enhancedImage: "images/pr4.jpg" },
+        { id: "5", originalImage: "images/or.jpg", enhancedImage: "images/pr5.jpg" },
+        { id: "6", originalImage: "images/or.jpg", enhancedImage: "images/pr6.jpg" },
+		 { id: "7", originalImage: "images/or.jpg", enhancedImage: "images/pr7.jpg" },
+		  { id: "8", originalImage: "images/or.jpg", enhancedImage: "images/pr8.jpg" },
+		   { id: "9", originalImage: "images/or.jpg", enhancedImage: "images/pr9.jpg" },
+        { id: "10", originalImage: "images/or.jpg", enhancedImage: "images/pr10.jpg" }
+    ];
+
+    const table = document.getElementById("examplesTable");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgModalContent");
+    const closeModal = document.querySelector(".close");
+
+    // Function to display images in the modal
+    function openImageInModal(src) {
+        modal.style.display = "block";
+        modalImg.src = src;
+    }
+
+    // Loop through each prompt and add a row to the table
+    prompts.forEach(prompt => {
+        const row = table.insertRow();
+
+        // Original Image cell with click event to open in modal
+        const originalImageCell = row.insertCell();
+        originalImageCell.innerHTML = `<img src="${prompt.originalImage}" alt="Original Image" width="100" style="cursor: pointer;">`;
+        originalImageCell.querySelector("img").addEventListener("click", () => {
+            openImageInModal(prompt.originalImage);
+        });
+
+        // Prompt Number cell
+        const promptNumberCell = row.insertCell();
+        promptNumberCell.innerText = `Prompt #${prompt.id}`;
+
+        // Enhanced Image cell with click event to open in modal
+        const enhancedImageCell = row.insertCell();
+        enhancedImageCell.innerHTML = `<img src="${prompt.enhancedImage}" alt="Enhanced Image" width="100" style="cursor: pointer;">`;
+        enhancedImageCell.querySelector("img").addEventListener("click", () => {
+            openImageInModal(prompt.enhancedImage);
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+  
+
+</body>
+</html>
