@@ -374,8 +374,7 @@ Keywords: Emphasize features such as the wooden dining table, modern black chair
     prompts.forEach(prompt => {
         const row = table.insertRow();
 
-        // Original Image cell with click event to open in modal <img src="image_name.jpg" alt="description">
-
+        // Original Image cell with click event to open in modal
         const originalImageCell = row.insertCell();
         originalImageCell.innerHTML = `<img src="${prompt.originalImage}" alt="Original Image" width="100" style="cursor: pointer;">`;
         originalImageCell.querySelector("img").addEventListener("click", () => {
